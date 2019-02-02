@@ -50,7 +50,7 @@ Thumbs.db
 
 semantic/
 semantic.json
-.angular-cli.json
+angular.json
 src/environments/firebase.config.ts
 npm-install.txt
 .editorconfig
