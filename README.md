@@ -78,7 +78,7 @@ ng g c new-component --module app
 ## These 3 are for universal-rendering
 npm i -S @angular/platform-server @nguniversal/module-map-ngfactory-loader ts-loader
 check here --> [Universal-Rendering](https://github.com/angular/angular-cli/wiki/stories-universal-rendering)
-cp and paste these to new angular-cli pj. tsconfig.json universal.rendering.server.ts webpack.server.config.js tsconfig.server.json main.server.ts app.server.module.ts --> cp 2nd obj in apps of .angular-cli.json and paste to new .angular-cli.json and modified styles and scripts
+cp and paste these to new angular-cli pj. tsconfig.json universal.rendering.server.ts webpack.server.config.js tsconfig.server.json main.server.ts app.server.module.ts --> cp 2nd obj in apps of angular.json and paste to new angular.json and modified styles and scripts
 
 
 ## After you init pj -- Step 1 N 2
@@ -86,7 +86,7 @@ cp and paste these to new angular-cli pj. tsconfig.json universal.rendering.serv
 --> add app-routing.module.ts, and cp and paste content, then add operators.ts and cp and paste content, last one is compare tsconfig.json --> .gitignore at bottom add these 3
 semantic/
 semantic.json
-.angular-cli.json
+angular.json
 src/environments/firebase.config.ts
 npm-install.txt
 .editorconfig
@@ -210,7 +210,7 @@ it will create new folder called semantic or semanticui, enter it, run gulp buil
 "scripts": []
 ```
 ---
-### For moment tether popper.js in .angular-cli.json
+### For moment tether popper.js in angular.json
 moment tether popper.js
 ```javascript
 "scripts": [
