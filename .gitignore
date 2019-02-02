@@ -42,3 +42,17 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+/e2e
+
+semantic/
+semantic.json
+.angular-cli.json
+src/environments/firebase.config.ts
+npm-install.txt
+.editorconfig
+README.md
+ssl/

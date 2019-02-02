@@ -7,7 +7,12 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:client-server-bundles": "ng build --prod && ng build --prod --app 1 --output-hashing=false",
+    "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
+    "build:ssr": "npm run build:client-server-bundles && npm run webpack:server",
+    "serve:ssr": "node dist/universalRenderingServer.js",
+    "pd": "ng build --prod --aot"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +26,7 @@
     "@angular/router": "~7.2.0",
     "core-js": "^2.5.4",
     "rxjs": "~6.3.3",
+    "semantic-ui": "^2.4.2",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
   },

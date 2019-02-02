@@ -2,10 +2,17 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "outDir": "../out-tsc/app",
+		// "module": "es2015",
+		"baseUrl": "./",
+		"paths": {
+			"@customDefinePath/*": ["featureComponents/custom-define-path/*"],
+			"@formMore/*": ["featureComponents/form-more/*"]
+		},
     "types": []
   },
   "exclude": [
-    "test.ts",
-    "**/*.spec.ts"
+		"test.ts",
+		"**/*.spec.ts",
+		"**/*.e2e-spec.ts"
   ]
 }
