@@ -227,10 +227,9 @@ import Chart from 'chart.js';
 ```
 ---
 
-### For intl
+### For intl -- this is too old, use angular-intl
 in polyfills.ts, uncomment these 2 at bottom.
+Rendering --> [Angular-Intl](https://www.npmjs.com/package/angular-intl)
 ```javascript
-import 'intl';  // Run `npm install --save intl`.
-import 'intl/locale-data/jsonp/en';
 ```
 ---
