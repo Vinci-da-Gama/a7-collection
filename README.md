@@ -76,7 +76,7 @@ ng g c new-component --module app
 ### firebase basic auth url: https://backend-pjname.firebaseio.com/filename.json?auth=token
 
 ## These 3 are for universal-rendering
-npm i -S <span style=“color:red;”>@angular/platform-server @nguniversal/module-map-ngfactory-loader ts-loader</span>
+npm i -S <span style=“color:red;”>@angular/platform-server @nguniversal/module-map-ngfactory-loader ts-loader</span>![Status: **Not yet implemented**](http://placehold.it/350x65/FF0000/FFFF00.png&text=Not+yet+implemented)
 check here --> [Universal-Rendering](https://github.com/angular/angular-cli/wiki/stories-universal-rendering)
 cp and paste these to new angular-cli pj. tsconfig.json universal.rendering.server.ts webpack.server.config.js tsconfig.server.json main.server.ts app.server.module.ts --> cp 2nd obj in apps of angular.json and paste to new angular.json and modified styles and scripts
 
