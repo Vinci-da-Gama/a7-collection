@@ -76,7 +76,7 @@ ng g c new-component --module app
 ### firebase basic auth url: https://backend-pjname.firebaseio.com/filename.json?auth=token
 
 ## These 3 are for universal-rendering
-npm i -S @angular/platform-server @nguniversal/module-map-ngfactory-loader ts-loader
+npm i -S <span style=“color:red;”>@angular/platform-server @nguniversal/module-map-ngfactory-loader ts-loader</span>
 check here --> [Universal-Rendering](https://github.com/angular/angular-cli/wiki/stories-universal-rendering)
 cp and paste these to new angular-cli pj. tsconfig.json universal.rendering.server.ts webpack.server.config.js tsconfig.server.json main.server.ts app.server.module.ts --> cp 2nd obj in apps of angular.json and paste to new angular.json and modified styles and scripts
 
@@ -187,8 +187,8 @@ export class AppModule { }
 ],
 ```
 
-Install Bootstrap or ng2-semantic-ui(prefer this, no jquery required.), you can include css and js in angular-cli.json
-### bootstrap in angular-cli.json
+Install Bootstrap or ng2-semantic-ui(prefer this, no jquery required.), you can include css and js in angular.json
+### bootstrap in angular.json
 ```javascript
 "styles": [
     "./node_modules/bootstrap/dist/css/bootstrap.min.css",
@@ -200,7 +200,7 @@ Install Bootstrap or ng2-semantic-ui(prefer this, no jquery required.), you can 
 ]
 ```
 ---
-### ng2-semantic-ui in angular-cli.json --Dependencies angular7 and Semantic UI CSS
+### ng2-semantic-ui in angular.json --Dependencies angular7 and Semantic UI CSS
 it will create new folder called semantic or semanticui, enter it, run gulp build. then you get dist folder under it.
 ```javascript
 "styles": [
