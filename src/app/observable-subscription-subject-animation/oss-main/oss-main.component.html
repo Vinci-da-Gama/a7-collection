@@ -1,0 +1,46 @@
+<p>
+	oss-main works!
+</p>
+<div class="ui stackable four column grid">
+	<div class="column">
+		<em class="fz2em">
+			angular5 observable has 3 functions (success, error and done) -- usually you should use subject to sync data. But let's start
+			with a custom Observable. -- Check console.
+			<br />
+		</em>
+		<b>
+			rule2: usually, everytime you use observable to get data, you should use subscription on ngDestory to stop the data transaction.
+		</b>
+	</div>
+	<div class="column">
+		rule3:
+		<span class="fz2em">Subject</span> is observable and observer. Let's use subject to transaction data to valpass-contentelemRef-dir-encapsu
+		--> &lt;app-data-from-subject-server&gt;
+		<em class="fz2em">
+			subject cannot transaction data inbetween modules, due to route and component re-init problem. But it is good for transform
+			data inbetween components, it is good for replace eventEmit. But donot forgot to use subscription, because it is observer
+			and observable.
+		</em>
+		<br />
+		<div class="ui right labeled left icon input">
+			<i class="tags icon"></i>
+			<input type="text" placeholder="Click right olive tag to send data." #textForSubject />
+			<span class="ui tag label olive" (click)="assignValToSubjectVariable()">
+				Input text for subject server
+			</span>
+		</div>
+	</div>
+	<div class="column">
+		<div class="ui divided selection list">
+			<app-receivedata-from-subjectserve>
+			</app-receivedata-from-subjectserve>
+		</div>
+	</div>
+	<div class="column">
+		<app-animate-collection>
+		</app-animate-collection>
+	</div>
+</div>
+
+<div class="ui divider hidden"></div>
+<div class="ui divider hidden"></div>

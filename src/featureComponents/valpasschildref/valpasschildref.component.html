@@ -1,0 +1,25 @@
+<p>
+	valpass child ref works!
+</p>
+<div>
+	<input type="text" [(ngModel)]="childData" />
+	<p>
+		when u checking html in angular5 web, you will see sth like _ngcontent-c5 in each element. This is called Encapsulation.
+		Default value is
+		<em>
+			@Component(&#123; encapsulation: ViewEncapsulation.Emulated &#125;)
+		</em>
+		<br /> If ur app is native app, then the value would be
+		<cite>
+			@Component(&#123; encapsulation: ViewEncapsulation.Native &#125;)
+		</cite>
+		<br /> If you want to remove encapsulation -->
+		<b>
+			@Component(&#123; encapsulation: ViewEncapsulation.None &#125;)
+		</b>
+		<br /> remember --> css style is still globally when compile those into production.
+	</p>
+	<button type="button" (click)="updateTextToParent()" class="update-btn">
+		update to parent
+	</button>
+</div>

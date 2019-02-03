@@ -1,0 +1,77 @@
+<p>
+	input-output-event-emit-ecapsu-local-ref-view-child-element-ref works!
+</p>
+<div class="ui stackable four column grid">
+	<div class="column">
+		<pre>Parent Value Source -- after reset you will see data comes back</pre>
+		<input type="text" [(ngModel)]="initData" placeholder="input any text..." />
+	</div>
+	<div class="column">
+		<app-valpasschildref [fromParentText]="initData" (childToParentTextEmmitter)="updateTextEmmitter($event)">
+		</app-valpasschildref>
+	</div>
+	<div class="column">
+		<app-viewchild-localref-elementref [ParentVal]="inputWithLocalRef">
+			<p>
+				{{inputWithLocalRef}}
+			</p>
+			<input #localrefinputfield type="text" [(ngModel)]="inputWithLocalRef" />
+			<button class="ui teal button" (click)="getValFromLocalRef(localrefinputfield)">
+				<i class="icon braille"></i>
+				Get Local Ref Val
+			</button>
+			<button class="ui teal button" (click)="onChangesFirst()">
+				<i class="question circle outline icon"></i>
+				Change Value in Parent...
+			</button>
+			<button class="ui red button" (click)="destoryFirst()">
+				<i class="question circle outline icon"></i>
+				Trigger On Destory
+			</button>
+			<b>what is value for local reference? click btn to see what u input vie local reference</b>
+			<p>
+				Result: {{rz}}
+			</p>
+			<sub #localreftext>
+				This is some text, which would be accessed by local reference.
+				<br> check on console you will see me.
+			</sub>
+		</app-viewchild-localref-elementref>
+	</div>
+	<div class="column">
+		<app-directive-collection>
+		</app-directive-collection>
+	</div>
+	<div class="column">
+		<app-ngswitch></app-ngswitch>
+	</div>
+	<div class="column">
+		<p>
+			click to make dropdown toggle fluid.
+		</p>
+		<select name="skills" class="ui search dropdown" appDirCtrlClass>
+			<option value="">Skills</option>
+			<option value="angular">Angular</option>
+			<option value="css">CSS</option>
+			<option value="design">Graphic Design</option>
+			<option value="ember">Ember</option>
+			<option value="html">HTML</option>
+			<option value="ia">Information Architecture</option>
+			<option value="javascript">Javascript</option>
+			<option value="mech">Mechanical Engineering</option>
+			<option value="meteor">Meteor</option>
+			<option value="node">NodeJS</option>
+			<option value="plumbing">Plumbing</option>
+			<option value="python">Python</option>
+			<option value="rails">Rails</option>
+			<option value="react">React</option>
+			<option value="repair">Kitchen Repair</option>
+			<option value="ruby">Ruby</option>
+			<option value="ui">UI Design</option>
+			<option value="ux">User Experience</option>
+		</select>
+	</div>
+</div>
+
+<div class="ui divider hidden"></div>
+<div class="ui divider hidden"></div>

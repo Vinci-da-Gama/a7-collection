@@ -1,0 +1,15 @@
+<p>
+	receivedata-from-subjectserve...
+</p>
+<a class="item" *ngIf="subjText !== 'Waiting data from subject service...'">
+	<div class="ui purple horizontal label">From Subject Service</div>
+	<span appDirWithPassDownVal [defColor]="'skyblue'" highlightedColor="red">
+		{{subjText}}
+	</span>
+</a>
+<a class="item" *ngIf="subjText === 'Waiting data from subject service...'">
+	<div class="ui horizontal label">Default</div>
+	<span appDirWithPassDownVal [defColor]="'#eafdea'" highlightedColor="red">
+		{{subjText}}
+	</span>
+</a>

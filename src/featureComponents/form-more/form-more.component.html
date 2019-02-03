@@ -1,0 +1,87 @@
+<p>
+	form-more
+</p>
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<form [formGroup]="formWithGender" (ngSubmit)="onSubmit()">
+				<p>
+					You can group
+					<span class="fz2em">Many</span> fields into one FormGroup, so it is a FormGroup inside FormGroup. Then it is also can do FormArray inside
+					FormGroup.
+				</p>
+				<div formGroupName="GroupInside">
+					<div class="form-group">
+						<label for="fcusername">Username</label>
+						<input type="text" id="fcusername" [formControlName]="'fcUserName'" class="form-control" required />
+					</div>
+					<div class="ui orange message" *ngIf="!formWithGender.get('GroupInside.fcUserName').valid && (formWithGender.get('GroupInside.fcUserName').dirty || formWithGender.get('GroupInside.fcUserName').touched)">
+						<span *ngIf="formWithGender.get('GroupInside.fcUserName').errors.required">
+							UserName is Required.
+						</span>
+						<span *ngIf="formWithGender.get('GroupInside.fcUserName').errors['NameIsForbidden']">
+							This name is forbidden.
+						</span>
+					</div>
+					<p class="ui violet message">
+						Use async validator to check the email
+						<span class="fz2em">n@n.com</span> is invalid.
+					</p>
+					<div class="form-group">
+						<label for="email">email</label>
+						<input type="text" id="email" formControlName="fcEmail" class="form-control" required />
+					</div>
+					<div class="ui orange message" *ngIf="!formWithGender.get('GroupInside.fcEmail').valid && formWithGender.get('GroupInside.fcEmail').dirty || formWithGender.get('GroupInside.fcEmail').touched">
+						<p *ngIf="formWithGender.get('GroupInside.fcEmail').errors['required']">
+							Email is reqiured.
+						</p>
+						<p *ngIf="formWithGender.get('GroupInside.fcEmail').errors.pattern && !formWithGender.get('GroupInside.fcEmail').errors.required">
+							Pls input correct email.
+						</p>
+						<span *ngIf="formWithGender.get('GroupInside.fcEmail').errors['EmailIsForbidden'] && !formWithGender.get('GroupInside.fcEmail').errors.required">
+							Email is forbidden
+						</span>
+					</div>
+				</div>
+				<p>
+					Checkout box is also input, so form controller initial value should be null.
+					<br>
+					<b>
+						If you have formControlName, you donot need name anyway.
+					</b>
+				</p>
+				<div class="ui radio checkbox" *ngFor="let gender of genders; let i = index">
+					<input type="radio" [value]="gender" formControlName="fcGender" required />
+					<label>{{ gender }}</label>
+				</div>
+				<div class="ui orange message" *ngIf="fcGender.errors && (fcGender.dirty || fcGender.touched)">
+					<p *ngIf="fcGender.errors.reqiured">
+						Gender is Required.
+					</p>
+				</div>
+				<div formArrayName="fcHobbies">
+					<h4>Add Your Hobbies</h4>
+					<button class="ui brown button" (click)="onAddHobbies()">
+						Add Hobby
+					</button>
+					<h4 class="ui horizontal divider header">
+						<i class="tag icon"></i>
+						Hobbies_List
+					</h4>
+					<!-- *ngIf="fcHobbies.controls.length > 0" -->
+					<div class="ui breadcrumb">
+						<span *ngFor="let hobbyCtrl of fcHobbies.controls; let i = index;">
+							<input type="text" class="form-control" [formControlName]="i" required />
+							<i class="right chevron icon divider"></i>
+						</span>
+					</div>
+				</div>
+				<div class="ui divider hidden"></div>
+				<button class="positive ui button" type="submit" *ngIf="!formWithGender.valid" [ngClass]="{disabled: !formWithGender.valid, positive: formWithGender.valid}">
+					Submit
+				</button>
+			</form>
+		</div>
+	</div>
+</div>

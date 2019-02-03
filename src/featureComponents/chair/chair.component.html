@@ -1,0 +1,30 @@
+<p>
+	This is Chair Compo
+</p>
+<div class="ui middle aligned animated list">
+	<div class="item">
+		<img class="ui avatar image" src="../../assets/imgs/elliot.jpg" />
+		<div class="content">
+			<div class="header">
+				Current Chair
+			</div>
+			<p>
+				Name: {{currChair.name}}
+			</p>
+			<em>
+				Status: {{currChair.status}}
+			</em>
+		</div>
+	</div>
+</div>
+<p class="fz2em">
+	use RelativeTo for router navigate is quite convenient, the only problem is queryParams will be lost. so in navigation func,
+	we have Query Handling prop ---> queryParamsHandling &#123; 'merge' or 'preserve' &#125; --> 'merge': new data will replace
+	old data --> 'preserve': will be remained all the time. Thus, in this case, we donot pass any new data to route, we want
+	to keep data same and not lost. So, use 'preserve'.
+</p>
+<button class="ui attached purple button" aria-label="Go Target Chair" (click)="goEditChair()">
+	Go Edit Target Chair
+</button>
+<div class="ui divider hidden"></div>
+<div class="ui divider hidden"></div>

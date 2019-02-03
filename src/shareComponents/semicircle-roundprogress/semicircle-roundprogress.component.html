@@ -1,0 +1,16 @@
+<round-progress
+    [current]="semicircleProgressBar.currVal"
+    [max]="semicircleProgressBar.max"
+    [color]="semicircleProgressBar.color"
+    [background]="semicircleProgressBar.bgc"
+    [radius]="semicircleProgressBar.radius"
+    [stroke]="semicircleProgressBar.stroke"
+    [semicircle]="semicircleProgressBar.semicircle"
+    [rounded]="semicircleProgressBar.rounded"
+    [clockwise]="semicircleProgressBar.clockwise"
+    [responsive]="semicircleProgressBar.responsive"
+    [duration]="semicircleProgressBar.duration"
+    [animation]="semicircleProgressBar.animation"
+    [animationDelay]="semicircleProgressBar.animDelay"
+	(onRender)="doSomethingWithCurrentSemicircleValue($event)">
+</round-progress>

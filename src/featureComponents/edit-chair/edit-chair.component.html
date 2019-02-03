@@ -1,0 +1,49 @@
+<div *ngIf="!isAllowedEdit" class="fz2em">
+	Parent Btn goes Edit Page. But This Chair is not allowed to Be Edited. Only Dev Chair is alowed to be edited, due to we have
+	allowEdit: chair.id === 3 as queryParams.
+</div>
+<div *ngIf="isAllowedEdit">
+	<p class="fz2em">
+		Edit Chair Compo: This would be displayed first, due to the button goes to here. edit-chair works! the id in url is only
+		about route, if you write correct route, it goes to destination page. The id is also parameter, but to go destination page,
+		you donot have to get route params.
+	</p>
+	<em>
+		canDeavtivate guard is applied --> if you didnot do anything, you can go other route, if you did sth, but not update, it
+		will get confirm from you, if ok, go out, if cancle, stay.
+	</em>
+
+	<form [formGroup]="UpdateChairForm" (ngSubmit)="onUpdate(UpdateChairForm)">
+		<div class="ui input">
+			<label>Name: </label>
+			<input type="text" placeholder="Name..." formControlName="ChairName" required />
+			<div class="ui red message" *ngIf="ChairName.errors && (ChairName.dirty || ChairName.touched)">
+				<p *ngIf="ChairName.errors.required">
+					Chair Name is Required.
+				</p>
+			</div>
+		</div>
+		<div class="ui input">
+			<label>Status: </label>
+			<input type="text" placeholder="Status..." formControlName="ChairStatus" required />
+			<div class="ui red message" *ngIf="ChairStatus.errors && (ChairStatus.dirty || ChairStatus.touched)">
+				<p *ngIf="ChairStatus.errors.required">
+					Chair Status is Required.
+				</p>
+			</div>
+		</div>
+
+		<button class="ui purple button" type="submit" [disabled]="!UpdateChairForm.valid" [ngClass]="{disabled: !UpdateChairForm.valid, purple: UpdateChairForm.valid}">
+			Update Chair
+		</button>
+
+	</form>
+
+	<!-- <button class="ui olive button" (click)="goChairPage()">
+		Go Back Parent Chair
+	</button> -->
+
+	<div class="ui divider hidden"></div>
+	<div class="ui divider hidden"></div>
+
+</div>

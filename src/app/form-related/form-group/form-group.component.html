@@ -1,0 +1,251 @@
+<p>
+	form-group-pipe-i18n-tooltip-popover-modal
+</p>
+
+<div class="ui dimmer" [ngClass]="{active: isLoading}">
+	<div class="ui text loader">Loading</div>
+</div>
+
+<div class="ui stackable four column grid">
+	<div class="column">
+		<div class="ui card">
+			<div class="content">
+				<div class="header">Anonymous User State</div>
+			</div>
+			<div class="content">
+				<h4 class="ui sub header">State</h4>
+				<div class="ui small feed">
+					<div class="event">
+						<div class="content" *ngIf="isShowAnonymousUser()">
+							<div class="summary">
+								<div class="ui list">
+									<div class="item">
+										<div class="content">
+											<div class="header">Is Anonymous</div>
+											<p>
+												{{anonymousUser.isAnonymous}}
+											</p>
+										</div>
+									</div>
+									<div class="item">
+										<div class="content">
+											<div class="header">Token</div>
+											<p style="word-break: break-all;">
+												{{anonymousUser.refreshToken}}
+											</p>
+										</div>
+									</div>
+									<div class="item">
+										<div class="content">
+											<div class="header">uid</div>
+											<p>
+												{{anonymousUser.uid}}
+											</p>
+										</div>
+									</div>
+									<div class="item">
+										<div class="content">
+											<div class="header">creationTime</div>
+											<p>
+												{{anonymousUser.creationTime}}
+											</p>
+										</div>
+									</div>
+									<div class="item">
+										<div class="content">
+											<div class="header">lastSignInTime</div>
+											<p>
+												{{anonymousUser.lastSignInTime}}
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="event">
+						<div class="content">
+							<div class="summary">
+								<a>Stevie Feliciano</a> was added as an
+								<a>Administrator</a>
+							</div>
+						</div>
+					</div> -->
+				</div>
+			</div>
+			<!-- <div class="extra content">
+				<button class="ui button">Join Project</button>
+			</div> -->
+		</div>
+	</div>
+	<div class="column">
+		<h2 class="ui header">
+			<i class="circular settings icon"></i>
+			<div class="content">
+				Sign Up
+				<div class="sub header">Sign up form</div>
+			</div>
+		</h2>
+		<form novalidate [formGroup]="signupForm" (ngSubmit)="onAuth(signupForm)">
+			<div class="ui right labeled left icon input">
+				<i class="tags icon"></i>
+				<input type="text" formControlName="suemail" placeholder="Enter email" required />
+				<a class="ui tag label">
+					Email
+				</a>
+				<div class="ui red message" *ngIf="suemail.errors && (suemail.dirty || suemail.touched)">
+					<p *ngIf="suemail.errors.required">
+						Email is required.
+					</p>
+					<p *ngIf="suemail.errors.pattern">
+						Pls input valid email.
+					</p>
+				</div>
+			</div>
+			<div class="ui right labeled left icon input">
+				<i class="tags icon"></i>
+				<input type="password" formControlName="supassword" placeholder="Enter password" required />
+				<a class="ui tag label">
+					Password
+				</a>
+			</div>
+			<div class="ui red message" *ngIf="supassword.errors && (supassword.dirty || supassword.touched)">
+				<p *ngIf="supassword.errors.required">
+					Password is required.
+				</p>
+				<p *ngIf="supassword.errors.minlength">
+					Minlength is 2.
+				</p>
+			</div>
+			<div class="ui hidden divider"></div>
+			<div>
+				<button class="ui button" [ngClass]="{disabled: !signupForm.valid, positive: signupForm.valid}" type="submit" [disabled]="!signupForm.valid">
+					Sign Up
+				</button>
+			</div>
+		</form>
+		<pre>
+			Is sign up success? {{isSignup}}
+		</pre>
+	</div>
+	<div class="column">
+		<h2 class="ui header">
+			<i class="circular users icon"></i>
+			<div class="content">
+				Sign In
+				<div class="sub header">Sign in form</div>
+				<p>After signin go see fake users details</p>
+				<p>user: a@a.com pswd: aaaaaa</p>
+			</div>
+		</h2>
+		<form novalidate [formGroup]="signinForm" (ngSubmit)="onAuth(signinForm)">
+			<div class="ui right labeled left icon input">
+				<i class="tags icon"></i>
+				<input type="text" formControlName="siemail" placeholder="Enter email" required />
+				<a class="ui tag label">
+					Email
+				</a>
+			</div>
+			<div class="text-danger" *ngIf="siemail.errors && (siemail.dirty || siemail.touched)">
+				<p *ngIf="siemail.errors.required">
+					Email is required.
+				</p>
+				<p *ngIf="siemail.errors.pattern">
+					Pls input valid email.
+				</p>
+			</div>
+			<div class="ui right labeled left icon input">
+				<i class="tags icon"></i>
+				<input type="password" formControlName="sipassword" placeholder="Enter password" required />
+				<a class="ui tag label">
+					Password
+				</a>
+				<div class="ui red message" *ngIf="sipassword.errors && (sipassword.dirty || sipassword.touched)">
+					<p *ngIf="sipassword.errors.required">
+						Password is required.
+					</p>
+					<p *ngIf="sipassword.errors.minlength">
+						Minlength is 2.
+					</p>
+				</div>
+			</div>
+			<div class="ui hidden divider"></div>
+			<div>
+				<button class="positive ui button" type="submit" [ngClass]="{disabled: !signinForm.valid, positive: signinForm.valid}" [disabled]="!signinForm.valid">
+					Sign In
+				</button>
+			</div>
+		</form>
+		<pre>
+			Is sign in success? {{isSignin}}
+		</pre>
+	</div>
+	<div class="column">
+		<app-rating></app-rating>
+		<button class="ui red button" (click)="onSignout()">
+			<i class="heart icon"></i>
+			Sign Out
+		</button>
+		<a class="ui basic red left pointing label">
+			1,048
+		</a>
+	</div>
+</div>
+
+<div class="ui stackable three column grid">
+	<div class="column">
+		<!-- you define my_meaningful_id -->
+		<h1 i18n="@@my_meaningful_id">
+			Good Morning
+		</h1>
+		It will corporate with ngx-translate, not completed.
+	</div>
+	<div class="column">
+		<p>Check Pipe here...</p>
+		<div class="ui middle aligned animated list">
+			<div class="item">
+				<img class="ui avatar image" src="../../../assets/imgs/kristy.png">
+				<div class="content">
+					<cite class="header">
+						{{myNumber | number: '1.2-2'}}
+					</cite>
+				</div>
+			</div>
+			<div class="item">
+				<img class="ui avatar image" src="../../../assets/imgs/kristy.png">
+				<div class="content">
+					<div class="header">
+						{{myNumber | fixNumber}}
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<img class="ui avatar image" src="../../../assets/imgs/kristy.png">
+				<div class="content">
+					<div class="header">
+						{{ {name: 'jsonPipe'} | json }}
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<img class="ui avatar image" src="../../../assets/imgs/kristy.png">
+				<div class="content">
+					<pre class="header">
+						{{now | date:'dd/mm/yyyy'}}
+					</pre>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="column">
+		<app-text-mask>
+		</app-text-mask>
+	</div>
+</div>
+
+<sui-dimmer class="page" [(isDimmed)]="canDimmed">
+	<h2 class="ui inverted icon header">
+		<i class="heart icon"></i>
+		You cancled. The page has been dimmed!
+	</h2>
+</sui-dimmer>

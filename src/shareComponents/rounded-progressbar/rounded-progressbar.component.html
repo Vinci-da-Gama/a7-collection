@@ -1,0 +1,16 @@
+<round-progress
+    [current]="fullprogressData.currVal"
+    [max]="fullprogressData.max"
+    [color]="fullprogressData.color"
+    [background]="fullprogressData.bgc"
+    [radius]="fullprogressData.radius"
+    [stroke]="fullprogressData.stroke"
+    [semicircle]="fullprogressData.semicircle"
+    [rounded]="fullprogressData.rounded"
+    [clockwise]="fullprogressData.clockwise"
+    [responsive]="fullprogressData.responsive"
+    [duration]="fullprogressData.duration"
+    [animation]="fullprogressData.animation"
+    [animationDelay]="fullprogressData.animDelay"
+	(onRender)="doSomethingWithCurrentValue($event)">
+</round-progress>

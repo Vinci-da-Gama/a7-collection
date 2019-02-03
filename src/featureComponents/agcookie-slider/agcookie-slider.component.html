@@ -1,0 +1,38 @@
+<p>
+	ag-cookie-slider-slider works!
+</p>
+<div class="ui two column grid">
+	<div class="column">
+		<div class="ui fluid image">
+			<a class="ui left corner label">
+				<i class="heart icon"></i>
+			</a>
+			<p>
+				top-left triangle
+			</p>
+		</div>
+	</div>
+	<div class="column">
+		<div class="ui fluid image">
+			<a class="ui red right corner label">
+				<i class="save icon"></i>
+			</a>
+			<p>
+				top-right triangle
+			</p>
+		</div>
+	</div>
+</div>
+<div class="ui divider hidden"></div>
+<div class="ui divider hidden"></div>
+<div>
+	<input type="number" [(ngModel)]="sliderVal" placeholder="input a number for slider" />
+	<button class="ui olive button" type="button" (click)="onSaveCookie()">
+		Save to Cookie
+	</button>
+	<div class="ui divider horizontal"></div>
+	<button class="ui teal button" type="button" (click)="getCookieVal()">
+		Get Cookie Val
+	</button>
+	<nouislider [connect]="true" [min]="0" [max]="15" [step]="0.5" [(ngModel)]="slicookieval"></nouislider>
+</div>

@@ -1,0 +1,128 @@
+<div class="ui stackable three column grid">
+	<div class="column">
+		<div class="ui basic segment">
+			<!--The whole content below can be removed with the new code.-->
+			<div style="text-align:center">
+				<h3>{{welcome}}</h3>
+				<img width="160" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo="
+				/>
+			</div>
+			<h2>Here are some links to help you start: </h2>
+			<ul>
+				<li>
+					<h3>
+						<a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a>
+					</h3>
+				</li>
+				<li>
+					<h3>
+						<a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a>
+					</h3>
+				</li>
+				<li>
+					<h3>
+						<a target="_blank" href="http://angularjs.blogspot.ca/">Angular blog</a>
+					</h3>
+				</li>
+			</ul>
+
+			<div class="container">
+				<ul>
+					<li>
+						To build aot in angular-cli is quite easy -- cmd: ng build --prod --aot
+					</li>
+					<li>
+						have unit-test sample -- in init-page-content.component.html
+					</li>
+				</ul>
+			</div>
+
+
+		</div>
+	</div>
+	<div class="column">
+		uppercase must just follow the string, it is for string only.
+		<div class="ui message">
+			<div class="header">
+				pipe with 2 arguments
+			</div>
+			<p>
+				String --> if length >= 5, then only select first 3 letters. --> so &#39;welcome to&#39; will return wel.
+			</p>
+			<p>
+				{{welcome | shorten:5:3}}
+			</p>
+		</div>
+		<div class="ui icon message">
+			<i class="notched circle loading icon"></i>
+			<div class="content">
+				<div class="header">
+					Filter Pipe and Async Pipe
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="ui divider hidden"></div>
+							<input type="text" class="form-control" [(ngModel)]="filteredStatus" placeholder="match status..." />
+							<div class="ui divider hidden"></div>
+							<button class="btn btn-primary" (click)="onAddServer()">
+								Add Server
+							</button>
+							<br>
+							<h2>App Status: {{ appStatus | async }}</h2>
+							<p>
+								build-in async pipe will help us fetch data from callback response.
+							</p>
+							<hr>
+							<p>
+								match inputString(filteredStatus) with array status, then display items share same status -- status have (stable and offline).
+								--- use pure: false in @pipe to triggering reload data in page, but usually donot do it, filter should response to
+								text input or action, not data reload. However, if you want, add pure: false to @pipe, it will cause a little performace
+								issue.
+							</p>
+							<ul class="list-group">
+								<li class="list-group-item" *ngFor="let server of servers | filterArray:filteredStatus:'status'" [ngClass]="getStatusClasses(server)">
+									<strong>{{ server.name | shorten:15 }}</strong> | {{ server.instanceType | uppercase }} | {{ server.started | date:'fullDate'
+									| uppercase }}
+									<a class="ui blue tag label">
+										{{ server.status }}
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="column">
+		<em class="fz2em">
+			httpClient -- progress and interceptor
+		</em>
+		<br /> 2nd argument for httpClient is http header config
+		<br /> &#123; observe: 'response', 'body', 'events', responseType: 'json' &#125; observe has response, body -- responseType has
+		json, blob, text, and arraybuffer
+		<p>
+			when observe: 'events', it returns 2 objects. 1st is action type, 2nd is data. check action type go response.type and HttpEventType.Send(...)
+		</p>
+		<p style="font-size: 16px;">
+			Why use Interceptor? Set Header, Params and ErrorHandling for all the time, then use interceptor. --> Interceptor is service,
+			and it belongs to HTTP_INTERCEPTORS -- useClass --> to accept multi provide, add multi: true. --> Interceptor will affect
+			all http or httpCli request. We add Crud service to interceptor service file to define which one we want to response and
+			you also have to inject the interceptor to specific component, otherwise, it will response to all httpCli request. And
+			To trigger interceptor, you must write your httpCli to HttpRequest.
+		</p>
+		<p>
+			Interceptor will be trigger every http request, if you load in ngOnInit, then it starts at beginning. --> Let's discuss how
+			to do auth interceptor(I donot do it in this case) --> Let say you have a url looks like this: https://asdfasdf.json?auth:token_string,
+			then in authService you have getToken func, in the http request service you donot need list completed url, you only write
+			https://asdfasdf.json as the url, the in the interceptor inside clone function params: req.params.set('auth', this.fbService.getFbToken())
+			--> In this way you can add auth token to url, If you cannot get the token, then your http request would be failed.
+		</p>
+		<p class="fz2em">
+			Everytime, all intrceptors would be triggered, the order you write them in providers, the the order for execution.
+		</p>
+	</div>
+	<div class="column"></div>
+</div>

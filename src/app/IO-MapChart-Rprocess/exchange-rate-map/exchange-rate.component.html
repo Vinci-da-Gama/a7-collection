@@ -1,0 +1,83 @@
+<p>
+	Input Output Map Chart RoundProgress
+</p>
+
+<div class="ui stackable four column grid">
+	<div class="column">
+		<app-angu-goomap>
+		</app-angu-goomap>
+	</div>
+	<div class="column">
+		<div class="ui cards">
+			<div class="card">
+				<div class="content">
+					<img class="right floated mini ui image" src="../../../assets/imgs/elliot.jpg">
+					<div class="header">
+						Exchange Rate
+					</div>
+					<div class="meta">
+						Today rate is:
+						<div class="ui input">
+							<input type="number" [(ngModel)]="todayRate" placeholder="input rate..." #exchangeRateBox />
+						</div>
+					</div>
+					<div class="description">
+						U can adjust rate by clicking Adjusting button, Adjust button will pass value through route parameter.
+					</div>
+				</div>
+				<div class="extra content">
+					<div class="ui two buttons">
+						<a [routerLink]="['/map-exchangeRage/support-rate', todayRate]">
+							<div class="ui basic green button">
+								Adjust (route_poarams)
+							</div>
+						</a>
+						<!-- <button class="ui violet button">
+							Pass by @Input()
+						</button> -->
+					</div>
+					<div>
+						<router-outlet></router-outlet>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="column">
+		<app-input-output [haharRate]="todayRate" (childToParentRateEmitter)="updateExchangeRate($event)">
+		</app-input-output>
+	</div>
+	<div class="column">
+		<canvas id="canvas"></canvas>
+		<pre>If you want to see chart data and example</pre>
+		<a href="http://tobiasahlin.com/blog/chartjs-charts-to-get-you-started/" target="_blank">
+			chart examples
+		</a>
+	</div>
+</div>
+<div class="ui stackable four column grid">
+	<div class="column">
+		<canvas #piecanvas></canvas>
+	</div>
+	<div class="column">
+		<app-horizontal-bar [hordata]="horizontalBarData"></app-horizontal-bar>
+	</div>
+	<div class="column">
+		<app-mixed-chart [mixdata]="mixedChartData"></app-mixed-chart>
+	</div>
+	<div class="column">
+		<div class="ui raised segment">
+			<a class="ui red ribbon label">round-progress1</a>
+			<span>Full Round Progress Bar</span>
+			<div>
+				<app-rounded-progressbar [fullprogressData]="fPData"></app-rounded-progressbar>
+			</div>
+			<a class="ui blue ribbon label">round-progress2</a>
+			<span>Semicircle Round Progress</span>
+			<div>
+				<app-semicircle-roundprogress [semicircleProgressBar]="sCPData"></app-semicircle-roundprogress>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ui hidden divider"></div>

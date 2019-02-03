@@ -1,0 +1,49 @@
+<p>
+	text-mask works!
+</p>
+
+<div class="mr-1em">
+	<div class="ui segment">
+		<a class="ui orange right ribbon label">Text Mask Date</a>
+		<span>Date Mask</span>
+		<div class="ui labeled input">
+			<div class="ui label">
+				Birthday:
+			</div>
+			<input type="text" [textMask]="{mask: dateMask}" placeholder="birthday" />
+		</div>
+	</div>
+	<div class="ui segment">
+		<a class="ui teal right ribbon label">Text Mask Email</a>
+		<span>Email Mask</span>
+		<div class="ui left action input">
+			<button class="ui teal labeled icon button">
+				<i class="cart icon"></i>
+				Checkout
+			</button>
+			<input type="text" [textMask]="{mask: eMask}" placeholder="sample@email.com" />
+		</div>
+	</div>
+	<div class="ui segment">
+		<a class="ui brown right ribbon label">Text Mask Street</a>
+		<span>Street is too hard for Text Mask, may be u need to find another dependencies.</span>
+		<div class="ui right labeled left icon input">
+			<i class="tags icon"></i>
+			<input type="text" placeholder="Enter tags" />
+			<a class="ui tag label">
+				Street
+			</a>
+		</div>
+	</div>
+	<div class="ui segment">
+		<a class="ui violet right ribbon label">Text Mask Phone</a>
+		<span>Phone Mask</span>
+		<div class="ui action input">
+			<input type="text" [textMask]="{mask: phoneMask}" placeholder="(555) 392-4932" />
+			<button class="ui teal right labeled icon button">
+				<i class="copy icon"></i>
+				Phone Num:
+			</button>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,20 @@
+<p>
+	<sub class="fz2em">Chairs</sub> works!
+</p>
+<div>
+	<ul>
+		<li *ngFor="let chair of chairsData; let i = index">
+			<a class="fz2em text-bold" [routerLink]="['/chairs', chair.id]" [queryParams]="{allowEdit: chair.id === 3 ? '1' : '0'}" fragment="loading">
+				{{chair.name}}
+			</a>
+			<br>
+			<em class="fz2em">Quality -- {{chair.status}}</em>
+		</li>
+	</ul>
+</div>
+<div>
+	<router-outlet></router-outlet>
+</div>
+
+<div class="ui divider hidden"></div>
+<div class="ui divider hidden"></div>

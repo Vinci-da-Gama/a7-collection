@@ -1,0 +1,66 @@
+<p>
+	next-content works!
+</p>
+<div class="ui stackable one column grid">
+	<div class="column">
+		<p>
+			routerLinkActive is for Tab links
+			<br> routerLink can be mainAboutRouter, due to it is one of root routes.
+			<br> routerLink also could be ../mainAboutRouter, go up to localhost:4200/, then add mainAboutRouter as route.
+		</p>
+		<p class="fz2em">
+			In short, router-outlet is help to replace the position where it should be &lt;app-compo&gt;.
+		</p>
+		<a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" [routerLink]="['/mainAboutRouter']">
+			Back To Parent Compo
+		</a>
+		<router-outlet></router-outlet>
+	</div>
+	<div class="column">
+		<em>
+			Fake Login Logout to approve auth-guard for user tab.
+		</em>
+		<br />
+		<b>
+			If click login, then when u go to user page, then can click user link to go details page, otherwise, you can go user details
+			page and you will be redirect back to home page.
+		</b>
+		<div class="ui buttons">
+			<p>
+				click login to go login form, the login get token as authenticated user. click logout then reset token to empty string;
+			</p>
+			<button class="ui red basic button" (click)="onLogin()">
+				login
+			</button>
+			<button class="ui blue basic button" (click)="onLogout()">
+				Logout
+			</button>
+		</div>
+		<sui-tabset>
+			<div class="ui top attached tabular menu">
+				<a class="item" suiTabHeader="1">Redirect To Home</a>
+				<a class="item" suiTabHeader="2">User Parameter</a>
+				<a class="item" suiTabHeader="3">Param-Fragment(chair)</a>
+			</div>
+			<div class="ui bottom attached segment" suiTabContent="1">
+				<button class="ui fluid inverted teal button" aria-label="label" (click)="goInitPage()">
+					Go Initial Page
+				</button>
+			</div>
+			<div class="ui bottom attached segment" suiTabContent="2">
+				<button class="ui fluid inverted teal button" aria-label="label" (click)="goUsersPage()">
+					Go Users Page
+				</button>
+			</div>
+			<div class="ui bottom attached segment" suiTabContent="3">
+				<button class="ui fluid inverted green button" aria-label="label" (click)="goEditFirstChair(1)">
+					Go to Edit First chair
+				</button>
+			</div>
+		</sui-tabset>
+	</div>
+	<div class="column">
+	</div>
+	<div class="column">
+	</div>
+</div>

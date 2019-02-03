@@ -1,0 +1,76 @@
+<p>
+	RouteParams QueryParams Fragment ConvertNum ChildRoute QueryHandling WildCard NoFound(err)Page RouteGuard-CanDeactivate-CanActive-CanLoad
+	Redirect ResolveDynamicData RouteGuard(service and child) LocalStrategy
+</p>
+<div class="ui stackable two column grid">
+	<div class="column">
+		<p>
+			when component is main compo of a module, donot need router-outlet, but if it is a compo inject into another compo, then
+			you should use router-outlet
+			<br /> the place to use router-outlet is same position to use component (app-nested-content) --> if you want to go there (the
+			next compo), add &lt;a [routerLink]="['/next-compo']"&gt; on top of it.
+		</p>
+		<!-- <app-nested-content></app-nested-content> -->
+		<a [routerLink]="['/mainAboutRouter/next-compo']">
+			Go Next Component
+		</a>
+	</div>
+
+	<div class="column">
+		<router-outlet></router-outlet>
+	</div>
+</div>
+<div class="ui stackable four column grid">
+	<div class="column">
+		Usually, if we give CanActivate guard to parent route, all child routes would be blocked. Thus, it is better us CanActivateChild,
+		block children, not parent.
+		<br />
+		<em class="fz2em">
+			Mention one thing --> Due to service donot have meta data (html, css, js), so if you want to inject it into Module or Component,
+			you should give @Injectable(). But, if you want to inject a service into another service, donot need Injectable.
+		</em>
+	</div>
+	<div class="column">
+		<em class="fz2em">
+			To support old browser, we have to add old hash route (route-local-Strategy) in root route module.
+		</em>
+		<img src="../../../assets/imgs/old-browser-hash-route.png" class="hash-route" alt="route-local-Strategy" />
+		<cite class="fz2em">
+			<br /> you can see # in the url. In this way, webserver will only care the thing before /#, so it will let webserver read correct
+			route, because webserver will use localhost://4200/ as root and replace it with server/, then pluse route --> server/route.
+		</cite>
+	</div>
+	<div class="column">
+		<em class="fz2em">
+			Lazy load route should only apply to app.moudule.ts. It help to solve egal load problem when modules and compos has been
+			injected into app.module.ts --> So, it saves resources. Lazy load usually for avoid when load main page, also load children
+			page and remove module from main module.
+		</em>
+		<br>
+		<em>
+			core is route center, by make it as featureModule, it will also improve some lazy load. also all related services goes in,
+			if one server only for one specific module, move the server to that module.
+		</em>
+		<ul>
+			<li class="fz2em">
+				2 example -- tabs --> router-relatied.router.module.ts (root route do lodaChild module) -- in parent html -- add routeLink,
+				if u want to display in same page add route outlet.
+			</li>
+			<li>
+				routelinks and route outlet html is in tly.component.html, it also has router outlet for children views.
+			</li>
+			<li>
+				three-tabs-route.module.ts will include all children component and layout -- tly.component
+			</li>
+			<li class="fz2em">
+				if you already make module forChild routes, then you do not have to make it Children again, by using loadChildren.
+			</li>
+			<li>
+				Too may errors when I do test in this pj, just download the tutorial unit-test folder to see.
+			</li>
+		</ul>
+
+	</div>
+</div>
+<div class="ui divider hidden"></div>
+<div class="ui divider hidden"></div>

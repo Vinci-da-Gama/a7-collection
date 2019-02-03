@@ -1,0 +1,19 @@
+<div>
+	<div>
+		<div>
+			<a class="fz2em text-bold" [routerLink]="['/users', user.id, user.name]" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+			    *ngFor="let user of users">
+				Link -- {{ user.name }}
+			</a>
+		</div>
+		<button class="ui fluid teal button" aria-label="Go Parent Route" (click)="goParentRoute()">
+			Go Parent Route
+		</button>
+	</div>
+	<div>
+		<!--<app-user></app-user>-->
+		<router-outlet></router-outlet>
+	</div>
+</div>
+<div class="ui divider hidden"></div>
+<div class="ui divider hidden"></div>

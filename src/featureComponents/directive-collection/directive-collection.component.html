@@ -1,0 +1,39 @@
+<p>
+	For global usage about module, component, directive and pipe...
+	<br>
+	&#64;NgModule(&#123;<br>
+		declarations: [sthComponent, sthDirective, sthPipe],<br>
+		imports: [sthModule1, sthModule2],<br>
+		exports: [sthModule1, sthModule2, sthComponent, sthDirective, sthPipe]
+		&#125;)<br>
+		export class AllInOneModule &#123;&#125;
+</p>
+
+<p [ngStyle]="setStyle()">
+	directive-collection works!
+</p>
+<p [ngClass]="{ className: isThisClass }">
+	This is ng Class.
+</p>
+<p *ngIf="isThisIf; else elseNgIf()">
+	ng-if ... else ...
+</p>
+<em appBasicDirective>
+	basic directive...
+</em>
+<br />
+<em appCustomHostDirective>
+	This is Custome Host Render2 Directive
+</em>
+<br />
+<br />
+<cite appDirWithPassDownVal [defColor]="'skyblue'" highlightedColor="red">
+	directive with pass down value...
+</cite>
+<br />
+<br />
+<div *appTmplViewcontentRef="isViewTemplate">
+	<p>
+		templateRef and viewContentRef -- see tmple according to viewcontentRef and TemplateRef in directive.
+	</p>
+</div>

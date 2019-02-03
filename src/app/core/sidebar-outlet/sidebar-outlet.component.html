@@ -1,0 +1,36 @@
+<div class="ui top attached menu">
+	<a class="item" (click)="sidebar.toggle()" [routerLink]="['']">
+		<i class="sidebar icon"></i> Menu
+	</a>
+</div>
+<sui-sidebar-container class="ui bottom attached segment">
+	<sui-sidebar class="inverted vertical" #sidebar>
+		<a class="item" [routerLink]="['/authForm']">
+			Form-Group-Pipe-i18n-Tooltip-Popover-Modal
+		</a>
+		<a class="item" [routerLink]="['/map-exchangeRage']">
+			Input-Output-Map-Chart-RoundProgress
+		</a>
+		<a class="item" [routerLink]="['/slicer-clickoutpopover-moment']">
+			Stars-Clickout-Popover-Nouislider-slider-Moment
+		</a>
+		<a class="item" [routerLink]="['/valpass-contentelemRef-dir-encapsu']">
+			valpass-contentelemRef-dir-encapsu
+		</a>
+		<a class="item" [routerLink]="['/mainAboutRouter']">
+			all skills about router
+		</a>
+		<a class="item" [routerLink]="['/oss']">
+			observable-subscription-subject-animation
+		</a>
+		<a class="item" [routerLink]="['/icefhe']">
+			lazyLoad-canload-envPathSetup-formMore-HttpXhrBackend-Errorhandler
+		</a>
+	</sui-sidebar>
+	<sui-sidebar-sibling [isDimmedWhenVisible]="true">
+		<router-outlet></router-outlet>
+		<button class="ui button" (click)="sidebar.open()">
+			Open Sidebar
+		</button>
+	</sui-sidebar-sibling>
+</sui-sidebar-container>

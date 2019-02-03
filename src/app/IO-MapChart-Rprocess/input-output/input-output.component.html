@@ -1,0 +1,18 @@
+<h2 class="ui header">
+	<img src="../../../assets/imgs/patrick.png" class="ui circular image"> This sub component get value By @Input()
+	<p>
+		And return new rate by @Output() EventEmitter
+	</p>
+</h2>
+<div class="ui right labeled input">
+	<label for="exchangeRate" class="ui label">$</label>
+	<input type="text" id="exchangeRate" placeholder="Exchange Rate..." [(ngModel)]="childReceivedRate" />
+	<!-- <div class="ui basic label">.00</div> -->
+</div>
+<div class="ui divider hidden">
+</div>
+<button class="ui teal button" type="button" (click)="resetRate()">
+	Reset Rate
+</button>
+<div class="ui divider hidden">
+</div>
