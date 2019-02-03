@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 
 @Component({
-	selector: 'app-valpasschildref',
+	selector: 'musaxi-valpasschildref',
 	templateUrl: './valpasschildref.component.html',
 	styleUrls: ['./valpasschildref.component.scss'],
 	encapsulation: ViewEncapsulation.None

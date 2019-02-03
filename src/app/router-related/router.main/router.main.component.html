@@ -7,10 +7,10 @@
 		<p>
 			when component is main compo of a module, donot need router-outlet, but if it is a compo inject into another compo, then
 			you should use router-outlet
-			<br /> the place to use router-outlet is same position to use component (app-nested-content) --> if you want to go there (the
+			<br /> the place to use router-outlet is same position to use component (musaxi-nested-content) --> if you want to go there (the
 			next compo), add &lt;a [routerLink]="['/next-compo']"&gt; on top of it.
 		</p>
-		<!-- <app-nested-content></app-nested-content> -->
+		<!-- <musaxi-nested-content></musaxi-nested-content> -->
 		<a [routerLink]="['/mainAboutRouter/next-compo']">
 			Go Next Component
 		</a>

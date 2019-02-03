@@ -4,7 +4,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { User } from '../../contracts/models/user-class';
 
 @Component({
-	selector: 'app-users',
+	selector: 'musaxi-users',
 	templateUrl: './users.component.html'
 })
 export class UsersComponent {

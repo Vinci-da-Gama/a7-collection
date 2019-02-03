@@ -3,7 +3,7 @@ import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { Chart } from 'chart.js';
 
 @Component({
-	selector: 'app-horizontal-bar',
+	selector: 'musaxi-horizontal-bar',
 	templateUrl: './horizontal-bar.component.html',
 	styleUrls: ['./horizontal-bar.component.scss']
 })

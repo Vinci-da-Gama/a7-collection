@@ -2,7 +2,7 @@ import { Component, OnInit, OnChanges, SimpleChanges, Input, DoCheck, AfterConte
 import { ElementRef } from '@angular/core';
 
 @Component({
-	selector: 'app-viewchild-localref-elementref',
+	selector: 'musaxi-viewchild-localref-elementref',
 	templateUrl: './viewchild-localRef-elementRef.component.html',
 	styleUrls: ['./viewchild-localRef-elementRef.component.scss']
 })

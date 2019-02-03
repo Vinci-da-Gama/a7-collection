@@ -9,7 +9,7 @@ import { ConfirmModal } from '../../../helpers/confirm-modal/confirm-modal.compo
 import { CrudService } from '../../../services/crud.service';
 
 @Component({
-	selector: 'app-form-group',
+	selector: 'musaxi-form-group',
 	templateUrl: './form-group.component.html',
 	styleUrls: ['./form-group.component.scss']
 })

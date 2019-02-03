@@ -3,7 +3,7 @@ import { HttpEvent, HttpEventType } from '@angular/common/http';
 import { CrudService } from '../../../services/crud.service';
 
 @Component({
-	selector: 'app-init-page-content',
+	selector: 'musaxi-init-page-content',
 	templateUrl: './init-page-content.component.html',
 	styleUrls: ['./init-page-content.component.scss']
 })

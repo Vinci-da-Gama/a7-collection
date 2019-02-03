@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 
 @Component({
-	selector: 'app-icefhe-main',
+	selector: 'musaxi-icefhe-main',
 	templateUrl: './Lcefhe-main.component.html',
 	styleUrls: ['./Lcefhe-main.component.scss']
 })

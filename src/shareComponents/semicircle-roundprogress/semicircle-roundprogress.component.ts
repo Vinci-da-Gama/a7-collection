@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 import { RoundprogressClass } from '../../contracts/models/roundprogress-class';
 
 @Component({
-	selector: 'app-semicircle-roundprogress',
+	selector: 'musaxi-semicircle-roundprogress',
 	templateUrl: './semicircle-roundprogress.component.html',
 	styleUrls: ['./semicircle-roundprogress.component.scss']
 })

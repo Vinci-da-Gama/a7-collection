@@ -3,7 +3,7 @@ import { Component, OnInit, ViewChild, Input, ElementRef } from '@angular/core';
 import { Chart } from 'chart.js';
 
 @Component({
-	selector: 'app-mixed-chart',
+	selector: 'musaxi-mixed-chart',
 	templateUrl: './mixed-chart.component.html',
 	styleUrls: ['./mixed-chart.component.scss']
 })

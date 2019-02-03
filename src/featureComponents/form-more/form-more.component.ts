@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators, FormControlName, FormArray } from '@angular/forms';
 import { InitPageContentComponent } from '../../app/init-page/init-page-compo/init-page-content.component';
 
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 @Component({
-	selector: 'app-form-more',
+	selector: 'musaxi-form-more',
 	templateUrl: './form-more.component.html',
 	styleUrls: ['./form-more.component.scss']
 })

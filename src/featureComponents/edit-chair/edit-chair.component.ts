@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router, ChildActivationEnd } from '@angular/router';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 import { ChairInterface } from '../../contracts/interfaces/chair-interface';
 import { AsyncObsPromiseBoolInterface } from '../../contracts/interfaces/async-obspromise-interface';
 import { ChairsService } from '../../services/chairs/chairs.service';
 
 @Component({
-	selector: 'app-edit-chair',
+	selector: 'musaxi-edit-chair',
 	templateUrl: './edit-chair.component.html',
 	styleUrls: ['./edit-chair.component.scss']
 })

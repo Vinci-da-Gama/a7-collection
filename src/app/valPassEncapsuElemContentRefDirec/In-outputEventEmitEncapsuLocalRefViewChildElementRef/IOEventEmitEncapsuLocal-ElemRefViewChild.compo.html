@@ -7,11 +7,11 @@
 		<input type="text" [(ngModel)]="initData" placeholder="input any text..." />
 	</div>
 	<div class="column">
-		<app-valpasschildref [fromParentText]="initData" (childToParentTextEmmitter)="updateTextEmmitter($event)">
-		</app-valpasschildref>
+		<musaxi-valpasschildref [fromParentText]="initData" (childToParentTextEmmitter)="updateTextEmmitter($event)">
+		</musaxi-valpasschildref>
 	</div>
 	<div class="column">
-		<app-viewchild-localref-elementref [ParentVal]="inputWithLocalRef">
+		<musaxi-viewchild-localref-elementref [ParentVal]="inputWithLocalRef">
 			<p>
 				{{inputWithLocalRef}}
 			</p>
@@ -36,14 +36,14 @@
 				This is some text, which would be accessed by local reference.
 				<br> check on console you will see me.
 			</sub>
-		</app-viewchild-localref-elementref>
+		</musaxi-viewchild-localref-elementref>
 	</div>
 	<div class="column">
-		<app-directive-collection>
-		</app-directive-collection>
+		<musaxi-directive-collection>
+		</musaxi-directive-collection>
 	</div>
 	<div class="column">
-		<app-ngswitch></app-ngswitch>
+		<musaxi-ngswitch></musaxi-ngswitch>
 	</div>
 	<div class="column">
 		<p>

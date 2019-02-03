@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-	selector: 'app-input-output',
+	selector: 'musaxi-input-output',
 	templateUrl: './input-output.component.html',
 	styleUrls: ['./input-output.component.scss']
 })

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import emailMask from 'text-mask-addons/dist/emailMask';
 
 @Component({
-	selector: 'app-text-mask',
+	selector: 'musaxi-text-mask',
 	templateUrl: './text-mask.component.html',
 	styleUrls: ['./text-mask.component.scss']
 })

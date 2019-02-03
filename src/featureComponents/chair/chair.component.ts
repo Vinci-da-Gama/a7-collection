@@ -6,7 +6,7 @@ import { ChairsService } from '../../services/chairs/chairs.service';
 import { Data } from '@agm/core/services/google-maps-types';
 
 @Component({
-	selector: 'app-chair',
+	selector: 'musaxi-chair',
 	templateUrl: './chair.component.html',
 	styleUrls: ['./chair.component.scss']
 })

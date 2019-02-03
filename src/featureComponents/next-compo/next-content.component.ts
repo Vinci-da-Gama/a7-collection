@@ -5,7 +5,7 @@ import { TabModel } from '../../contracts/models/tabs-class';
 import { FbAuthService } from '../../services/auth/fb-auth.service';
 
 @Component({
-	selector: 'app-nested-content',
+	selector: 'musaxi-nested-content',
 	templateUrl: './next-content.component.html',
 	styleUrls: ['./next-content.component.scss']
 })

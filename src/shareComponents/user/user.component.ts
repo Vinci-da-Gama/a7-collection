@@ -1,10 +1,10 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { Subscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs';
 import { User } from '../../contracts/models/user-class';
 
 @Component({
-	selector: 'app-user',
+	selector: 'musaxi-user',
 	templateUrl: './user.component.html'
 })
 export class UserComponent implements OnInit, OnDestroy {

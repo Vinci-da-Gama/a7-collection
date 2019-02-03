@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
-	selector: 'app-ioee-ecapsu-local-element-ref-viewchild',
+	selector: 'musaxi-ioee-ecapsu-local-element-ref-viewchild',
 	templateUrl: './IOEventEmitEncapsuLocal-ElemRefViewChild.compo.html',
 	styleUrls: ['./IOEventEmitEncapsuLocal-ElemRefViewChild.compo.scss']
 })

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-	selector: 'app-supply-rate',
+	selector: 'musaxi-supply-rate',
 	templateUrl: './supply-rate.component.html',
 	styleUrls: ['./supply-rate.component.scss']
 })

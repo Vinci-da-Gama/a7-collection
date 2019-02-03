@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'app-rating',
+	selector: 'musaxi-rating',
 	templateUrl: './rating.component.html',
 	styleUrls: ['./rating.component.scss']
 })

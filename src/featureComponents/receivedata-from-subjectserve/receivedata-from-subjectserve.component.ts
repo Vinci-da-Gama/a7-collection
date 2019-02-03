@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { SubjectDataTransactionService } from '../../services/internal/subject-data-transaction.service';
 
 @Component({
-	selector: 'app-receivedata-from-subjectserve',
+	selector: 'musaxi-receivedata-from-subjectserve',
 	templateUrl: './receivedata-from-subjectserve.component.html',
 	styleUrls: ['./receivedata-from-subjectserve.component.scss']
 })

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'app-directive-collection',
+	selector: 'musaxi-directive-collection',
 	templateUrl: './directive-collection.component.html',
 	styleUrls: ['./directive-collection.component.scss']
 })

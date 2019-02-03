@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 
 @Component({
-	selector: 'app-agcookie-slider',
+	selector: 'musaxi-agcookie-slider',
 	templateUrl: './agcookie-slider.component.html',
 	styleUrls: ['./agcookie-slider.component.scss']
 })

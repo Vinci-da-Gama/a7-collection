@@ -3,7 +3,7 @@ import * as moment from 'moment';
 import { StaticInjector } from '@angular/core/src/di/injector';
 
 @Component({
-	selector: 'app-cpcmss',
+	selector: 'musaxi-cpcmss',
 	templateUrl: './cpcmss.component.html',
 	styleUrls: ['./cpcmss.component.scss']
 })

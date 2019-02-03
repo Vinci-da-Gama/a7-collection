@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 import { ConfirmModalContextInterface } from '../../contracts/interfaces/confirm-modal.interface';
 
 @Component({
-	selector: 'app-confirm-modal',
+	selector: 'musaxi-confirm-modal',
 	templateUrl: './confirm-modal.component.html',
 	styleUrls: ['./confirm-modal.component.scss']
 })

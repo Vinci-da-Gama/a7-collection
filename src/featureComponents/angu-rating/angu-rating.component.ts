@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 // import { OnClickEvent, OnRatingChangeEven, OnHoverRatingChangeEvent } from 'angular-star-rating/star-rating-struct';
 
 @Component({
-	selector: 'app-angu-rating',
+	selector: 'musaxi-angu-rating',
 	templateUrl: './angu-rating.component.html',
 	styleUrls: ['./angu-rating.component.scss']
 })

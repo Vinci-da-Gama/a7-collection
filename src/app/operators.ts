@@ -1,10 +1,18 @@
 // rxjs
-import 'rxjs/add/observable/throw';
-// import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/mergeMap';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/do';
-import 'rxjs/add/operator/toPromise';
+// import 'rxjs/add/observable/throw';
+import { throwError,
+	NEVER, EMPTY,
+	of, concat, merge,
+	Notification } from 'rxjs';
+// do becomes tap
+import {
+	tap, mergeMap,
+	map, catchError,
+	finalize, delay,
+	debounceTime,
+	concatMap
+} from 'rxjs/operators';
+// import 'rxjs/add/operator/toPromise';
 
-// ngrx
-//import '@ngrx/core/add/operator/select';
+// ngrx -- it is for ngrx, but not for just rxjs.
+// import '@ngrx/core/add/operator/select';

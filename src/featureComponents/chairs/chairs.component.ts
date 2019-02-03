@@ -5,7 +5,7 @@ import { ChairsService } from '../../services/chairs/chairs.service';
 import { AuthGuardService } from '../../services/auth/auth-guard.service';
 
 @Component({
-	selector: 'app-chairs',
+	selector: 'musaxi-chairs',
 	templateUrl: './chairs.component.html',
 	styleUrls: ['./chairs.component.scss']
 })

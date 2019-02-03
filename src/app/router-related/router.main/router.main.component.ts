@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'app-router.main',
+	selector: 'musaxi-router.main',
 	templateUrl: './router.main.component.html',
 	styleUrls: ['./router.main.component.scss']
 })

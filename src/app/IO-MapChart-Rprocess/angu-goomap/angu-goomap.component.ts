@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MapMarkerInterface } from '../../../contracts/interfaces/google-map-marker.interface';
 
 @Component({
-	selector: 'app-angu-goomap',
+	selector: 'musaxi-angu-goomap',
 	templateUrl: './angu-goomap.component.html',
 	styleUrls: ['./angu-goomap.component.scss']
 })

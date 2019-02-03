@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Data } from '@angular/router';
 
 @Component({
-	selector: 'app-notfound-page',
+	selector: 'musaxi-notfound-page',
 	templateUrl: './notfound-page.component.html',
 	styleUrls: ['./notfound-page.component.scss']
 })

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'app-ngswitch',
+	selector: 'musaxi-ngswitch',
 	templateUrl: './ngswitch.component.html',
 	styleUrls: ['./ngswitch.component.scss']
 })

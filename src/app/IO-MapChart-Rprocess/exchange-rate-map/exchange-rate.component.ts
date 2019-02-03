@@ -6,7 +6,7 @@ import { WeatherService } from '../../../services/weather.service';
 import { RoundprogressClass } from '../../../contracts/models/roundprogress-class';
 
 @Component({
-	selector: 'app-exchange-rate',
+	selector: 'musaxi-exchange-rate',
 	templateUrl: './exchange-rate.component.html',
 	styleUrls: ['./exchange-rate.component.scss'],
 	providers: [WeatherService]

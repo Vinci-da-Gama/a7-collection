@@ -4,8 +4,8 @@ import { AngularFirestore } from 'angularfire2/firestore';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
-import { FirebaseFirestore } from '@firebase/firestore-types';
-import { Observable } from 'rxjs/observable';
+// import { FirebaseFirestore } from '@firebase/firestore-types';
+import { Observable } from 'rxjs';
 import '../../app/operators';
 
 @Injectable()
@@ -23,7 +23,7 @@ export class FbAuthService {
 	) { }
 
 	public AnonymousAuth() {
-		this.afAuth.auth.signInAnonymously()
+		this.afAuth.auth.signInAnonymously();
 		return this.afAuth.authState;
 	}
 
@@ -33,7 +33,7 @@ export class FbAuthService {
 
 	public registerUser(email: string, password: string) {
 		return this.afAuth.auth.createUserWithEmailAndPassword(email, password)
-			.then((res: FirebaseFirestore) => {
+			.then((res: any) => {
 				return this.getFbToken();
 			})
 			.catch((err) => {
@@ -43,7 +43,7 @@ export class FbAuthService {
 
 	public signinUser(email: string, password: string) {
 		return this.afAuth.auth.signInWithEmailAndPassword(email, password)
-			.then((res: FirebaseFirestore) => {
+			.then((res: any) => {
 				console.log('47 -- login response: ', res);
 				return this.getFbToken();
 			})

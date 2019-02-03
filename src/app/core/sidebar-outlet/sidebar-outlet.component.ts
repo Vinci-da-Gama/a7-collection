@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'app-sidebar-outlet',
+	selector: 'musaxi-sidebar-outlet',
 	templateUrl: './sidebar-outlet.component.html',
 	styleUrls: ['./sidebar-outlet.component.scss']
 })

@@ -10,7 +10,7 @@ import {
 } from '@angular/animations';
 
 @Component({
-	selector: 'app-animate-collection',
+	selector: 'musaxi-animate-collection',
 	templateUrl: './animate-collection.component.html',
 	styleUrls: ['./animate-collection.component.scss'],
 	animations: [

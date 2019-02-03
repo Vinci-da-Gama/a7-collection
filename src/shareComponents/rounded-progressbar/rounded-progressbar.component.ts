@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-	selector: 'app-rounded-progressbar',
+	selector: 'musaxi-rounded-progressbar',
 	templateUrl: './rounded-progressbar.component.html',
 	styleUrls: ['./rounded-progressbar.component.scss']
 })

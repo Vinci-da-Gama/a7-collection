@@ -4,8 +4,8 @@
 
 <div class="ui stackable four column grid">
 	<div class="column">
-		<app-angu-goomap>
-		</app-angu-goomap>
+		<musaxi-angu-goomap>
+		</musaxi-angu-goomap>
 	</div>
 	<div class="column">
 		<div class="ui cards">
@@ -44,8 +44,8 @@
 		</div>
 	</div>
 	<div class="column">
-		<app-input-output [haharRate]="todayRate" (childToParentRateEmitter)="updateExchangeRate($event)">
-		</app-input-output>
+		<musaxi-input-output [haharRate]="todayRate" (childToParentRateEmitter)="updateExchangeRate($event)">
+		</musaxi-input-output>
 	</div>
 	<div class="column">
 		<canvas id="canvas"></canvas>
@@ -60,22 +60,22 @@
 		<canvas #piecanvas></canvas>
 	</div>
 	<div class="column">
-		<app-horizontal-bar [hordata]="horizontalBarData"></app-horizontal-bar>
+		<musaxi-horizontal-bar [hordata]="horizontalBarData"></musaxi-horizontal-bar>
 	</div>
 	<div class="column">
-		<app-mixed-chart [mixdata]="mixedChartData"></app-mixed-chart>
+		<musaxi-mixed-chart [mixdata]="mixedChartData"></musaxi-mixed-chart>
 	</div>
 	<div class="column">
 		<div class="ui raised segment">
 			<a class="ui red ribbon label">round-progress1</a>
 			<span>Full Round Progress Bar</span>
 			<div>
-				<app-rounded-progressbar [fullprogressData]="fPData"></app-rounded-progressbar>
+				<musaxi-rounded-progressbar [fullprogressData]="fPData"></musaxi-rounded-progressbar>
 			</div>
 			<a class="ui blue ribbon label">round-progress2</a>
 			<span>Semicircle Round Progress</span>
 			<div>
-				<app-semicircle-roundprogress [semicircleProgressBar]="sCPData"></app-semicircle-roundprogress>
+				<musaxi-semicircle-roundprogress [semicircleProgressBar]="sCPData"></musaxi-semicircle-roundprogress>
 			</div>
 		</div>
 	</div>

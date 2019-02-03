@@ -3,7 +3,7 @@ import {
 	CanLoad, CanActivate, CanActivateChild,
 	ActivatedRouteSnapshot, RouterStateSnapshot, Router
 } from '@angular/router';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 import { FbAuthService } from './fb-auth.service';
 
