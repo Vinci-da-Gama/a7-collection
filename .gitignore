@@ -53,8 +53,11 @@ Thumbs.db
 semantic/
 semantic.json
 angular.json
+tslint.json
+universal.rendering.server.ts
+webpack.server.config.js
 src/environments/firebase.config.ts
-npm-install.txt
+*.txt
 .editorconfig
 README.md
 ssl/

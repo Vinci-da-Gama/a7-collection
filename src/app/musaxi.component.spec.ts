@@ -16,14 +16,14 @@ describe('MusaxiComponent', () => {
 
 	it('should create the Musaxi', () => {
 		const fixture = TestBed.createComponent(MusaxiComponent);
-		const app = fixture.debugElement.componentInstance;
-		expect(app).toBeTruthy();
+		const musaxiApp = fixture.debugElement.componentInstance;
+		expect(musaxiApp).toBeTruthy();
 	});
 
 	it(`should have as title 'a7-collection'`, () => {
 		const fixture = TestBed.createComponent(MusaxiComponent);
-		const app = fixture.debugElement.componentInstance;
-		expect(app.title).toEqual('a7-collection');
+		const musaxiApp = fixture.debugElement.componentInstance;
+		expect(musaxiApp.title).toEqual('a7-collection');
 	});
 
 	it('should render title in a h1 tag', () => {

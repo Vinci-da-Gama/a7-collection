@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
 	selector: 'musaxi-root',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
 	styleUrls: ['./musaxi.component.scss']
 })
 export class MusaxiComponent {
-	title = 'a7-collection';
+	constructor() { }
 }
