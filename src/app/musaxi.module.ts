@@ -1,15 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { APP_BASE_HREF } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
 // import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 // firebase
-import { AngularFireModule } from 'angularfire2';
+import { AngularFireModule } from '@angular/fire';
 import { FirebaseConfig } from '../environments/firebase.config';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { AngularFireAuthModule } from 'angularfire2/auth';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 // END firebase
 
 import { CoreModule } from './core/core-module.module';
@@ -22,6 +23,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 // import { AgmCoreModule } from '@agm/core';
 import { MusaxiComponent } from './musaxi.component';
 import { InitPageModule } from './init-page/init-page.module';
+import { TextMaskModule } from 'angular2-text-mask';
 // import { FormGroupPipeI18nTooltipPopoverModalModule } from './form-related/formGroupPipeI18nTooltipPopoverModal.module';
 // import { InputOutputMapChartRoundprocessModule } from './IO-MapChart-Rprocess/inputOutputMapChartRoundprocess.module';
 // import { CoPCookieMomentSliderModule } from './clickoutPopoverCookieMomentStartSlider/copopoverCkmoSs.module';
@@ -71,4 +73,4 @@ import { NotFoundModule } from './not-found/not-found.module';
 	// providers: [],
 	bootstrap: [MusaxiComponent]
 })
-export class MusaxiModule { }
+export class MusaxiModule {}

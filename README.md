@@ -95,7 +95,7 @@ README.md
 2nd: ng g m share-module && ng g c sidebar-outlet && cd ../../../ --> cp and paste share-module.module.ts and sidebar-outlet component, then adjust app.module.ts --> then cp and paste entire not-found module, then adjust app.module.ts
 
 
-## app.module.ts
+## musaxi.module.ts (other pj may called: app.module.ts)
 ```javascript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
